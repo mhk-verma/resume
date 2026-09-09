@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { personalInfo } from '@/data/personal'
+import { basePath, personalInfo } from '@/data/personal'
 
 export default function MobileHeader() {
   return (
@@ -14,7 +14,7 @@ export default function MobileHeader() {
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
           <img
-            src="/profile.jpg"
+            src={`${basePath}/profile.jpg`}
             alt={personalInfo.name}
             className="w-full h-full object-cover"
           />

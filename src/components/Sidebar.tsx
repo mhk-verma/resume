@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
-import { personalInfo } from '@/data/personal'
+import { basePath, personalInfo } from '@/data/personal'
 
 const sidebarVariants = {
   hidden: { x: -100, opacity: 0 },
@@ -29,7 +29,7 @@ export default function Sidebar() {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <img
-            src="/profile.jpg"
+            src={`${basePath}/profile.jpg`}
             alt={personalInfo.name}
             className="w-full h-full object-cover"
           />

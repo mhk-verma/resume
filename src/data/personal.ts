@@ -1,3 +1,5 @@
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export const personalInfo = {
   name: "MAHAK VERMA",
   title: "Aspiring Full Stack Developer",
@@ -108,20 +110,76 @@ export const areasOfInterest = [
   "Data Structures & Algorithms",
 ]
 
-export const projects = [
+export interface Project {
+  id: number
+  title: string
+  description: string
+  category: string
+  technologies: string[]
+  liveDemo?: string
+  github: string
+  features: string[]
+}
+
+export const projects: Project[] = [
   {
     id: 1,
-    title: "Birthday Surprise",
-    description: "An interactive web experience designed to create a memorable birthday celebration with beautiful animations and personalized content.",
-    category: "Interactive Web Experience / Frontend",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "https://mhk-verma.github.io/birthday-surprise/",
-    github: "https://github.com/mhk-verma/birthday-surprise",
+    title: "Slice.exe — Gesture Fruit Ninja",
+    description: "A browser Fruit Ninja clone played with your hand in the air: MediaPipe hand tracking drives the blade, backed by a custom canvas game engine with physics, particles and collision detection.",
+    category: "Computer Vision / Game Development",
+    technologies: ["React", "TypeScript", "MediaPipe", "Canvas", "Tailwind CSS", "Vite"],
+    liveDemo: "https://mhk-verma.github.io/Fruit-Ninja/",
+    github: "https://github.com/mhk-verma/Fruit-Ninja",
     features: [
-      "Interactive birthday celebration experience",
-      "Beautiful animations and transitions",
-      "Personalized content display",
-      "Responsive design",
+      "Real-time hand tracking as game controller, with pointer fallback",
+      "Custom game engine: physics, spawning, collision and particle effects",
+      "Live HUD with score, combos and adjustable game settings",
+      "Responsive, animated UI built with Tailwind and Framer Motion",
+    ],
+  },
+  {
+    id: 2,
+    title: "AI Air Writing",
+    description: "Draw in mid-air using just your webcam — fingertip positions from MediaPipe Hands are tracked and turned into smooth strokes on a canvas.",
+    category: "Computer Vision / Frontend",
+    technologies: ["React", "JavaScript", "MediaPipe Hands", "Canvas", "Vite"],
+    liveDemo: "https://mhk-verma.github.io/ai-air-writing/",
+    github: "https://github.com/mhk-verma/ai-air-writing",
+    features: [
+      "Fingertip tracking from live webcam feed",
+      "Colour palette and adjustable brush size",
+      "Emoji stickers placed by gesture",
+      "Undo/clear controls over a real-time canvas",
+    ],
+  },
+  {
+    id: 3,
+    title: "The House of Mehak",
+    description: "A premium restaurant website with a cinematic opening animation, smooth scrolling and scroll-driven storytelling across menu, gallery and reservation sections.",
+    category: "Web Development / Frontend",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis"],
+    liveDemo: "https://mhk-verma.github.io/house-of-mehak/",
+    github: "https://github.com/mhk-verma/house-of-mehak",
+    features: [
+      "Cinematic opening animation and smooth scroll experience",
+      "Menu, gallery, story and experience sections driven by structured data",
+      "Reservation form and location details",
+      "Fully responsive, animation-heavy design",
+    ],
+  },
+  {
+    id: 4,
+    title: "Personal Portfolio",
+    description: "A dark, burgundy-themed personal portfolio built with React and Vite, featuring glass-morphism UI, a custom cursor and motion-driven sections.",
+    category: "Web Development / Frontend",
+    technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    liveDemo: "https://mhk-verma.github.io/portfolio/",
+    github: "https://github.com/mhk-verma/portfolio",
+    features: [
+      "Glass-morphism UI with custom interactive cursor",
+      "Framer Motion animations throughout",
+      "SEO and Open Graph metadata",
+      "Responsive layout for desktop, tablet and mobile",
     ],
   },
 ]
