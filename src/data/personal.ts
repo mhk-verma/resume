@@ -158,6 +158,7 @@ export const projects: Project[] = [
     description: "A premium restaurant website with a cinematic opening animation, smooth scrolling and scroll-driven storytelling across menu, gallery and reservation sections.",
     category: "Web Development / Frontend",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis"],
+    liveDemo: "https://mhk-verma.github.io/house-of-mehak/",
     github: "https://github.com/mhk-verma/house-of-mehak",
     features: [
       "Cinematic opening animation and smooth scroll experience",
@@ -172,6 +173,7 @@ export const projects: Project[] = [
     description: "A dark, burgundy-themed personal portfolio built with React and Vite, featuring glass-morphism UI, a custom cursor and motion-driven sections.",
     category: "Web Development / Frontend",
     technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    liveDemo: "https://mhk-verma.github.io/portfolio/",
     github: "https://github.com/mhk-verma/portfolio",
     features: [
       "Glass-morphism UI with custom interactive cursor",
