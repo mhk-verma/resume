@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Code2, Database, Globe } from 'lucide-react'
-import { personalInfo } from '@/data/personal'
+import { basePath, personalInfo } from '@/data/personal'
 import { useState, useEffect } from 'react'
 
 const heroVariants = {
@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <img
-            src="/profile.jpg"
+            src={`${basePath}/profile.jpg`}
             alt={personalInfo.name}
             className="w-full h-full object-cover"
           />

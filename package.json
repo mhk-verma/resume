@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "export": "NEXT_PUBLIC_BASE_PATH=/resume next build && touch out/.nojekyll",
+    "deploy": "npm run export && gh-pages -d out -b gh-pages -t"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
